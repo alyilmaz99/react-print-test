@@ -1,17 +1,6 @@
-import React, {useRef} from "react";
-import ReactDOM from "react-dom";
-import { useReactToPrint } from "react-to-print";
+import React from 'react';
+import { render } from 'react-dom';
+import Example from '../example/index';
 
-export class ComponentToPrint extends React.PureComponent {
-  render() {
-    return (
-      <div>My cool content here!</div>
-    );
-  }
-}
-export const ComponentToPrint = React.forwardRef((props, ref) => {
-  return (
-    <div ref={ref}>My cool content here!</div>
-  );
-});
-ReactDOM.render(<Example />, document.querySelector("#root"));
+render(<Example />
+, document.getElementById('app-root'));
